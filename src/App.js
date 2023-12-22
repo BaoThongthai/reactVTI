@@ -16,7 +16,7 @@ function App() {
       <Router>
         <div className="App">
           <Routes>
-            <Route path="/" element={<Login />} />
+            <Route path="/reactVTI" element={<Login />} />
 			<Route path="/register" element={<Register />} />
             <Route path="/productList" element={<ProductList />} />
 			<Route path="/ShopList" element={<ShopList />} />
