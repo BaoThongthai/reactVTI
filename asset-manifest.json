@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/BaoThongthai/reactVTI/static/css/main.3ecd850e.css",
-    "main.js": "/BaoThongthai/reactVTI/static/js/main.21eadb41.js",
-    "static/js/787.3aeda83d.chunk.js": "/BaoThongthai/reactVTI/static/js/787.3aeda83d.chunk.js",
-    "index.html": "/BaoThongthai/reactVTI/index.html",
-    "main.3ecd850e.css.map": "/BaoThongthai/reactVTI/static/css/main.3ecd850e.css.map",
-    "main.21eadb41.js.map": "/BaoThongthai/reactVTI/static/js/main.21eadb41.js.map",
-    "787.3aeda83d.chunk.js.map": "/BaoThongthai/reactVTI/static/js/787.3aeda83d.chunk.js.map"
+    "main.css": "/reactVTI/static/css/main.3ecd850e.css",
+    "main.js": "/reactVTI/static/js/main.ac11db92.js",
+    "static/js/787.3aeda83d.chunk.js": "/reactVTI/static/js/787.3aeda83d.chunk.js",
+    "index.html": "/reactVTI/index.html",
+    "main.3ecd850e.css.map": "/reactVTI/static/css/main.3ecd850e.css.map",
+    "main.ac11db92.js.map": "/reactVTI/static/js/main.ac11db92.js.map",
+    "787.3aeda83d.chunk.js.map": "/reactVTI/static/js/787.3aeda83d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3ecd850e.css",
-    "static/js/main.21eadb41.js"
+    "static/js/main.ac11db92.js"
   ]
 }
