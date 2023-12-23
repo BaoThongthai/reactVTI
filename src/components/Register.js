@@ -36,7 +36,7 @@ const Register = () => {
       }
 
       // Đăng ký thành công, có thể chuyển hướng hoặc thực hiện các hành động khác
-      navigate('/reactVTI');
+      navigate('/');
 
     } catch (error) {
       // Xử lý lỗi
