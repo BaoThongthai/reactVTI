@@ -31,11 +31,10 @@ const Register = () => {
       });
 
       if (!response.ok) {
-        // Xử lý lỗi từ API
         throw new Error('Đăng ký thất bại');
       }
 
-      // Đăng ký thành công, có thể chuyển hướng hoặc thực hiện các hành động khác
+      // Đăng ký thành công, về thẳng login
       navigate('/reactVTI');
 
     } catch (error) {
@@ -52,14 +51,14 @@ const Register = () => {
     <Container>
       <Row className="justify-content-md-center">
         <Col xs={12} md={6}>
-          <h2>Register</h2>
+          <h2>Đăng Ký Tài Khoản</h2>
           {error && <p style={{ color: 'red' }}>{error}</p>}
           <Form>
             <Form.Group controlId="formBasicFullName">
               <Form.Label>Full Name:</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Enter your full name"
+                placeholder="nhập tên"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
               />
@@ -69,7 +68,7 @@ const Register = () => {
               <Form.Label>Email:</Form.Label>
               <Form.Control
                 type="email"
-                placeholder="Enter email"
+                placeholder="Nhập email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -90,7 +89,7 @@ const Register = () => {
             </Button>
 
             <p>
-              Already have an account? <Link to="/">Login</Link>
+              Bạn đã có tài khoản ? <Link to="/reactVTI">Login</Link>
             </p>
           </Form>
         </Col>
