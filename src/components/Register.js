@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
+import './VideoBackgroundLogin.css';
 
 const Register = () => {
   const [fullName, setFullName] = useState('');
