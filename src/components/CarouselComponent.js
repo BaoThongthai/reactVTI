@@ -10,9 +10,7 @@ const CarouselComponent = () => {
           src="https://s.net.vn/FGDO"
           alt="First slide"
         />
-        <Carousel.Caption>
-          {/* Add any caption content here */}
-        </Carousel.Caption>
+
       </Carousel.Item>
       <Carousel.Item>
         <img
@@ -20,9 +18,7 @@ const CarouselComponent = () => {
           src="https://s.net.vn/BdN0"
           alt="Second slide"
         />
-        <Carousel.Caption>
-          {/* Add any caption content here */}
-        </Carousel.Caption>
+
       </Carousel.Item>
     </Carousel>
   );
