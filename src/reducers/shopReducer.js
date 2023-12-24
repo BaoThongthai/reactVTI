@@ -1,3 +1,4 @@
+//thiết lập trạng thái ban đầu của ứng dụng
 const initialState = {
   shops: [],
   loading: false,
@@ -13,6 +14,13 @@ const shopReducer = (state = initialState, action) => {
       return { ...state, loading: false };
     case 'ADD_SHOP_SUCCESS':
       return { ...state, shops: [...state.shops, action.payload] };
+	case 'DELETE_SHOP':
+      // Xóa cửa hàng từ danh sách khi nhận action DELETE_SHOP
+      const updatedShops = state.shops.filter((shop) => shop.id !== action.payload);
+      return {
+        ...state,
+        shops: updatedShops,
+      };
     default:
       return state;
   }
