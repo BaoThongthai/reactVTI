@@ -52,12 +52,12 @@ const Login = () => {
   };
 
   return (
-  <div className="background-video">
+  <div className="background_video">
         <video autoPlay loop muted>       
 		<source src={require('./Background-login.mp4')} type="video/mp4" />
       </video>
 	  
-	  <div className="login-container">
+	  <div className="login_container">
     <Container>
 	
 

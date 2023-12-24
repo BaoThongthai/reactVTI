@@ -6,9 +6,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faPencilAlt } from '@fortawesome/free-solid-svg-icons';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
-import './VideoBackground.css';
+
 import AddProductForm from './AddProductForm';
 import ProductSearch from './ProductSearch';
+import './VideoBackground.css';
 import CarouselComponent from './CarouselComponent';
 import NavbarComponent from './NavbarComponent';
 

@@ -1,7 +1,7 @@
 @echo off
 echo Running Git commands...
 git add .
-git commit -m "autopost"
+git commit -m "fixloicss"
 git push origin master
 
 echo Running NPM command...
