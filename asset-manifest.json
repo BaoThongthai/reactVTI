@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.css": "/reactVTI/static/css/main.635687a7.css",
-    "main.js": "/reactVTI/static/js/main.35a6b0ac.js",
+    "main.css": "/reactVTI/static/css/main.af114b28.css",
+    "main.js": "/reactVTI/static/js/main.78b31710.js",
     "static/js/787.3aeda83d.chunk.js": "/reactVTI/static/js/787.3aeda83d.chunk.js",
     "static/media/videobackground.mp4": "/reactVTI/static/media/videobackground.f5a73a1d855fedf69208.mp4",
-    "static/media/Background-login.mp4": "/reactVTI/static/media/Background-login.591cb9af550ab19792e6.mp4",
     "index.html": "/reactVTI/index.html",
-    "main.635687a7.css.map": "/reactVTI/static/css/main.635687a7.css.map",
-    "main.35a6b0ac.js.map": "/reactVTI/static/js/main.35a6b0ac.js.map",
+    "main.af114b28.css.map": "/reactVTI/static/css/main.af114b28.css.map",
+    "main.78b31710.js.map": "/reactVTI/static/js/main.78b31710.js.map",
     "787.3aeda83d.chunk.js.map": "/reactVTI/static/js/787.3aeda83d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.635687a7.css",
-    "static/js/main.35a6b0ac.js"
+    "static/css/main.af114b28.css",
+    "static/js/main.78b31710.js"
   ]
 }
