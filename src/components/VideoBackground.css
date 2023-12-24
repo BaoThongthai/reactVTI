@@ -1,0 +1,34 @@
+/* VideoBackground.css */
+
+.video-background {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  color: white; /* Đổi màu văn bản tùy theo background video */
+}
+
+.background-video,
+.container {
+  position: relative;
+  overflow: visible; 
+}

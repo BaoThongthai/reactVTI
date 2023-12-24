@@ -10,6 +10,8 @@ import AddProductForm from './AddProductForm';
 import ProductSearch from './ProductSearch';
 import CarouselComponent from './CarouselComponent';
 import NavbarComponent from './NavbarComponent';
+import './VideoBackground.css';
+
 
 
 const ProductList = ({ products, fetchProducts, editProductName, deleteProduct, addProduct }) => {
@@ -55,12 +57,22 @@ const ProductList = ({ products, fetchProducts, editProductName, deleteProduct, 
   );
 
   return (
+  <>
+  <div className="container-fluid">
+  <NavbarComponent />
+  <hr/><hr/>
+  <CarouselComponent />
+</div>
+
+<div className="background-video">
+      <video autoPlay loop muted>       
+		<source src={require('./videobackground.mp4')} type="video/mp4" />
+      </video>
+
     <div className="container mt-4 ">	 
-		<NavbarComponent />	
-		 <br /> <br /> 
-       <CarouselComponent />
+
 	   <hr/>
-	   <h1 className="mb-4" style={{ color: 'red', fontWeight: 'bold' }}>Danh sách sản phẩm</h1>
+	   <h1 className="mb-4" style={{ color: 'red', fontWeight: 'bold', textAlign: 'center' }}>Danh sách sản phẩm</h1>
       <ProductSearch onSearch={handleSearch} />
 
       {filteredProducts.length === 0 && <p style={{ color: 'red', fontWeight: 'bold' }}> * Không tìm thấy sản phẩm phù hợp.</p>}
@@ -68,8 +80,7 @@ const ProductList = ({ products, fetchProducts, editProductName, deleteProduct, 
       <div className="row row-cols-1 row-cols-md-4">
         {filteredProducts.map((product) => (
           <div key={product.id} className="col mb-4">
-             <div className={`card ${editingProductId === product.id ? 'border-primary' : ''}`} style={{ overflow: 'hidden', position: 'relative' }}>
-			
+             <div className={`card ${editingProductId === product.id ? 'border-primary' : ''}`} style={{ overflow: 'hidden', position: 'relative' }}>			
 				<img
 				  src={product.image}
 				  alt={product.name}
@@ -138,6 +149,8 @@ const ProductList = ({ products, fetchProducts, editProductName, deleteProduct, 
         </div>
       </div>
     </div>
+</div>
+	</>
   );
 };
 /*s. Trong trường hợp này, state.products.products từ Redux store được chuyển thành props products của component. 
