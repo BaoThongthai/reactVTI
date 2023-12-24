@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/reactVTI/static/css/main.3ecd850e.css",
-    "main.js": "/reactVTI/static/js/main.c06d3069.js",
+    "main.css": "/reactVTI/static/css/main.af114b28.css",
+    "main.js": "/reactVTI/static/js/main.78b31710.js",
     "static/js/787.3aeda83d.chunk.js": "/reactVTI/static/js/787.3aeda83d.chunk.js",
+    "static/media/videobackground.mp4": "/reactVTI/static/media/videobackground.f5a73a1d855fedf69208.mp4",
     "index.html": "/reactVTI/index.html",
-    "main.3ecd850e.css.map": "/reactVTI/static/css/main.3ecd850e.css.map",
-    "main.c06d3069.js.map": "/reactVTI/static/js/main.c06d3069.js.map",
+    "main.af114b28.css.map": "/reactVTI/static/css/main.af114b28.css.map",
+    "main.78b31710.js.map": "/reactVTI/static/js/main.78b31710.js.map",
     "787.3aeda83d.chunk.js.map": "/reactVTI/static/js/787.3aeda83d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3ecd850e.css",
-    "static/js/main.c06d3069.js"
+    "static/css/main.af114b28.css",
+    "static/js/main.78b31710.js"
   ]
 }
