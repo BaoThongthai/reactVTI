@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './VideoBackgroundLogin.css';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -51,14 +52,22 @@ const Login = () => {
   };
 
   return (
+  <div className="background-video">
+        <video autoPlay loop muted>       
+		<source src={require('./Background-login.mp4')} type="video/mp4" />
+      </video>
+	  
+	  <div className="login-container">
     <Container>
+	
+
       <Row className="justify-content-md-center">
         <Col xs={12} md={6}>
-          <h2>Login</h2>
+          <h2 style={{ marginTop: '70px' }}>Login</h2>
           {error && <p style={{ color: 'red' }}>{error}</p>}
           <Form>
             <Form.Group controlId="formBasicEmail">
-              <Form.Label>Email:</Form.Label>
+              <Form.Label style={{ color: 'white' }}>Email:</Form.Label>
               <Form.Control
                 type="email"
                 placeholder="Enter email"
@@ -68,7 +77,7 @@ const Login = () => {
             </Form.Group>
 
             <Form.Group controlId="formBasicPassword">
-              <Form.Label>Password:</Form.Label>
+              <Form.Label style={{ color: 'white' }}>Password :</Form.Label>
               <Form.Control
                 type="password"
                 placeholder="Password"
@@ -76,19 +85,21 @@ const Login = () => {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </Form.Group>
-
+			<br />
+			
             <Button variant="primary" onClick={handleLogin}>
               Login
             </Button>
-			
-			            {/* Thêm liên kết đến trang đăng ký */}
-            <p>
+            <p style={{ color: 'white' }}>
               Don't have an account? <Link to="/register">Register</Link>
             </p>
           </Form>
         </Col>
       </Row>
+	  
     </Container>
+	</div>
+	</div>
   );
 };
 

@@ -48,14 +48,20 @@ const Register = () => {
   };
 
   return (
+    <div className="background-video">
+        <video autoPlay loop muted>       
+		<source src={require('./Background-login.mp4')} type="video/mp4" />
+      </video>
+	  
+	  <div className="login-container">
     <Container>
       <Row className="justify-content-md-center">
         <Col xs={12} md={6}>
-          <h2>Đăng Ký Tài Khoản</h2>
+          <h2 style={{ marginTop: '70px' }} >Đăng Ký Tài Khoản</h2>
           {error && <p style={{ color: 'red' }}>{error}</p>}
           <Form>
             <Form.Group controlId="formBasicFullName">
-              <Form.Label>Full Name:</Form.Label>
+              <Form.Label style={{ color: 'white' }} >Full Name:</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="nhập tên"
@@ -65,7 +71,7 @@ const Register = () => {
             </Form.Group>
 
             <Form.Group controlId="formBasicEmail">
-              <Form.Label>Email:</Form.Label>
+              <Form.Label style={{ color: 'white' }} >Email:</Form.Label>
               <Form.Control
                 type="email"
                 placeholder="Nhập email"
@@ -75,7 +81,7 @@ const Register = () => {
             </Form.Group>
 
             <Form.Group controlId="formBasicPassword">
-              <Form.Label>Password:</Form.Label>
+              <Form.Label style={{ color: 'white' }} >Password:</Form.Label>
               <Form.Control
                 type="password"
                 placeholder="Password"
@@ -83,18 +89,20 @@ const Register = () => {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </Form.Group>
-
+			<br />
             <Button variant="primary" onClick={handleRegister} disabled={isRegistering}>
               {isRegistering ? 'Registering...' : 'Register'}
             </Button>
 
-            <p>
+            <p style={{ color: 'white' }}>
               Bạn đã có tài khoản ? <Link to="/reactVTI">Login</Link>
             </p>
           </Form>
         </Col>
       </Row>
     </Container>
+</div>
+</div>	
   );
 };
 
