@@ -3,7 +3,7 @@ import { Carousel } from 'react-bootstrap';
 
 const CarouselComponent = () => {
   return (
-    <Carousel style={{ marginTop: '-20px' }}> 
+    <Carousel style={{ width: '100vw', overflow: 'hidden' }}>
       <Carousel.Item>
         <img
           className="d-block w-100"
@@ -11,6 +11,7 @@ const CarouselComponent = () => {
           alt="First slide"
         />
         <Carousel.Caption>
+          {/* Add any caption content here */}
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -20,10 +21,9 @@ const CarouselComponent = () => {
           alt="Second slide"
         />
         <Carousel.Caption>
-
+          {/* Add any caption content here */}
         </Carousel.Caption>
       </Carousel.Item>
-  
     </Carousel>
   );
 };
