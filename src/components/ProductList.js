@@ -6,14 +6,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { faPencilAlt } from '@fortawesome/free-solid-svg-icons';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
-
-import AddProductForm from './AddProductForm';
-import ProductSearch from './ProductSearch';
+import AddProductForm from './AddProductForm/AddProductForm';
+import ProductSearch from './ProductSearch/ProductSearch';
 import './VideoBackground.css';
-import CarouselComponent from './CarouselComponent';
-import NavbarComponent from './NavbarComponent';
-
-
+import CarouselComponent from './Carousel/CarouselComponent';
+import RegisterBranch from './RegisterBranch/RegisterBranch';
 
 
 const ProductList = ({ products, fetchProducts, editProductName, deleteProduct, addProduct }) => {
@@ -26,13 +23,14 @@ const ProductList = ({ products, fetchProducts, editProductName, deleteProduct, 
     fetchProducts();
   }, [fetchProducts]);
 
+// xử lý khi người dùng bấm click
   const handleEditClick = (productId, currentName) => {
-    setEditingProductId(productId);
-    setNewProductName(currentName);
+    setEditingProductId(productId); // lấy ra id của sp được chọn
+    setNewProductName(currentName); // cập nhật trạng thái bằng cách hiện ra tên của sp
   };
 
   const handleSaveClick = (productId, newName) => {
-    editProductName(productId, newName);
+    editProductName(productId, newName); 
     setEditingProductId(null);
   };
 
@@ -50,9 +48,11 @@ const ProductList = ({ products, fetchProducts, editProductName, deleteProduct, 
     setShowAddModal(false);
   };
 
+
   const handleSearch = (searchTerm) => {
     setSearchTerm(searchTerm);
   };
+
 
   const filteredProducts = products.filter((product) =>
     product.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -60,21 +60,18 @@ const ProductList = ({ products, fetchProducts, editProductName, deleteProduct, 
 
   return (
   <>
-  <div className="container-fluid">
-  <NavbarComponent />
-  <hr/><hr/>
+  <div className="container-fluid" style={{marginTop:'60px',paddingLeft:0,paddingRight:0,paddingBottom:0}}>
   <CarouselComponent />
 </div>
 
 <div className="background-video">
       <video autoPlay loop muted>       
-		<source src={require('./videobackground.mp4')} type="video/mp4" />
+		<source src={require('./video/videobackground.mp4')} type="video/mp4" />
       </video>
 
     <div className="container mt-4 ">	 
 
-	   <hr/>
-	   <h1 className="mb-4" style={{ color: 'red', fontWeight: 'bold', textAlign: 'center' }}>Danh sách sản phẩm</h1>
+	   <h1 className="mb-4" style={{ color: 'red', fontWeight: 'bold', textAlign: 'center' ,marginTop:'0px'}}>Danh sách sản phẩm</h1>
       <ProductSearch onSearch={handleSearch} />
 
       {filteredProducts.length === 0 && <p style={{ color: 'red', fontWeight: 'bold' }}> * Không tìm thấy sản phẩm phù hợp.</p>}
@@ -135,7 +132,8 @@ const ProductList = ({ products, fetchProducts, editProductName, deleteProduct, 
 		  Thêm sản phẩm
 		</button>
 
-      <div className={`modal ${showAddModal ? 'show' : ''}`} tabIndex="-1" role="dialog" style={{ display: showAddModal ? 'block' : 'none' }}>
+
+      <div className={`modal ${showAddModal ? 'show' : ''}`}  style={{ display: showAddModal ? 'block' : 'none' }}>
         <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="modal-header">
@@ -149,24 +147,24 @@ const ProductList = ({ products, fetchProducts, editProductName, deleteProduct, 
             </div>
           </div>
         </div>
+		
+		
       </div>
+	  <hr />
+	  <RegisterBranch />
+	  <br />
     </div>
 </div>
 	</>
   );
 };
-/*s. Trong trường hợp này, state.products.products từ Redux store được chuyển thành props products của component. 
-Khi trạng thái thay đổi, component sẽ tự động render lại để hiển thị dữ liệu mới.*/
-// MapStateToProps: Chuyển đổi trạng thái trong store thành props của component
+
 const mapStateToProps = (state) => ({
   products: state.products.products,
 });
 
 
-// mapDispatchToProps: Chuyển đổi các action creator thành props của component
-/*Giải thích: Nó liên kết các actions với dispatch của Redux store.
- Khi component cần thay đổi trạng thái, nó có thể gọi các hàm được cung cấp thông qua props để dispatch các actions. 
-Ví dụ, fetchProducts sẽ gọi action để lấy dữ liệu từ một API và cập nhật store.*/
+
 const mapDispatchToProps = (dispatch) => ({
   fetchProducts: () => { 
     dispatch(fetchProductsRequest());
@@ -187,12 +185,4 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductList);
-/*Mục tiêu: Kết nối component với Redux store.
-Giải thích: 
-Hàm connect từ thư viện react-redux được sử dụng để kết nối component với Redux store.
- Nó nhận vào hai tham số: 
- mapStateToProps để ánh xạ trạng thái vào props 
- và mapDispatchToProps để ánh xạ actions vào props. 
- Kết quả là component ProductList 
- sẽ có khả năng truy cập vào dữ liệu từ Redux store thông qua props và
- có khả năng gọi các actions để thay đổi trạng thái của store.*/
+

@@ -1,5 +1,3 @@
-// productActions.js
-
 //FETCH SẢN PHẨM
 export const FETCH_PRODUCTS_REQUEST = 'FETCH_PRODUCTS_REQUEST';
 export const FETCH_PRODUCTS_SUCCESS = 'FETCH_PRODUCTS_SUCCESS';
@@ -72,14 +70,11 @@ export const deleteProductFailure = (error) => ({
   type: DELETE_PRODUCT_FAILURE,
   payload: error,
 });
-//funtion delete
-// actions/productActions.js
+
+
 export const deleteProduct = (productId) => {
   return (dispatch) => {
     dispatch(deleteProductRequest());
-
-    // Thực hiện API call hoặc xóa sản phẩm trong trường hợp của bạn
-    // Ở đây, mình giả sử sử dụng Mock API
     fetch(`https://65248470ea560a22a4e9e5cc.mockapi.io/api/v1/product/${productId}`, {
       method: 'DELETE',
     })
@@ -96,7 +91,6 @@ export const deleteProduct = (productId) => {
 };
 
 //ADD PRODUCT
-// actions/productActions.js
 export const ADD_PRODUCT_REQUEST = 'ADD_PRODUCT_REQUEST';
 export const ADD_PRODUCT_SUCCESS = 'ADD_PRODUCT_SUCCESS';
 export const ADD_PRODUCT_FAILURE = 'ADD_PRODUCT_FAILURE';
@@ -118,7 +112,6 @@ export const addProductFailure = (error) => ({
 export const addProduct = (newProduct) => {
   return (dispatch) => {
     dispatch(addProductRequest());
-
     fetch('https://65248470ea560a22a4e9e5cc.mockapi.io/api/v1/product', {
       method: 'POST',
       headers: {

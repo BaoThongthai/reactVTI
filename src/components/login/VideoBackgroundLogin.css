@@ -1,0 +1,22 @@
+.background_video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.background_video video {
+  object-fit: cover;
+}
+
+.login_container {
+  position: relative;
+  z-index: 1; /* Đặt z-index cao để nằm phía trước video */
+}
+
+.login_container h2 {
+  text-align: center;
+  color :white;
+}

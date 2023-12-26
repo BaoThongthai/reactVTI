@@ -33,7 +33,6 @@ const apiUrl = 'https://6580d5603dfdd1b11c422502.mockapi.io/shop';
 export const addShop = (shopData) => async (dispatch) => {
   try {
     const response = await axios.post(apiUrl, shopData);
-	//cập nhật store sau khi thêm
     dispatch({ type: 'ADD_SHOP_SUCCESS', payload: response.data });
   } catch (error) {
     dispatch({ type: 'ADD_SHOP_FAILURE', payload: error.message });
@@ -46,10 +45,7 @@ export const addShop = (shopData) => async (dispatch) => {
 export const deleteShop = (shopId) => {
   return async (dispatch) => {
     try {
-      // Gửi request xóa shop thông qua API của bạn
      await axios.delete(`https://6580d5603dfdd1b11c422502.mockapi.io/shop/${shopId}`);  
-      
-      // Dispatch action để cập nhật store sau khi xóa thành công
       dispatch({
         type: 'DELETE_SHOP',
         payload: shopId,

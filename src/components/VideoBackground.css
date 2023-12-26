@@ -18,14 +18,6 @@ video {
 
 }
 
-.content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: relative;
-  color: white; /* Đổi màu văn bản tùy theo background video */
-}
 
 .background-video,
 .container {
