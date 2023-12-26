@@ -1,17 +1,21 @@
 {
   "files": {
-    "main.css": "/reactVTI/static/css/main.43508770.css",
-    "main.js": "/reactVTI/static/js/main.c94250e6.js",
+    "main.css": "/reactVTI/static/css/main.6b64859c.css",
+    "main.js": "/reactVTI/static/js/main.a1af1b6d.js",
     "static/js/787.3aeda83d.chunk.js": "/reactVTI/static/js/787.3aeda83d.chunk.js",
     "static/media/videobackground.mp4": "/reactVTI/static/media/videobackground.f5a73a1d855fedf69208.mp4",
-    "static/media/Background-login.mp4": "/reactVTI/static/media/Background-login.591cb9af550ab19792e6.mp4",
+    "static/media/Background-loginvsregiter.mp4": "/reactVTI/static/media/Background-loginvsregiter.591cb9af550ab19792e6.mp4",
+    "static/media/bg2.jpg": "/reactVTI/static/media/bg2.a8e671d51d8782e69f6e.jpg",
+    "static/media/bg3.jpg": "/reactVTI/static/media/bg3.4c861622686d7a312463.jpg",
+    "static/media/logo.jpg": "/reactVTI/static/media/logo.7cbe794f0ae767b17a18.jpg",
+    "static/media/bg1.jpg": "/reactVTI/static/media/bg1.ede98ed6922468487810.jpg",
     "index.html": "/reactVTI/index.html",
-    "main.43508770.css.map": "/reactVTI/static/css/main.43508770.css.map",
-    "main.c94250e6.js.map": "/reactVTI/static/js/main.c94250e6.js.map",
+    "main.6b64859c.css.map": "/reactVTI/static/css/main.6b64859c.css.map",
+    "main.a1af1b6d.js.map": "/reactVTI/static/js/main.a1af1b6d.js.map",
     "787.3aeda83d.chunk.js.map": "/reactVTI/static/js/787.3aeda83d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.43508770.css",
-    "static/js/main.c94250e6.js"
+    "static/css/main.6b64859c.css",
+    "static/js/main.a1af1b6d.js"
   ]
 }
