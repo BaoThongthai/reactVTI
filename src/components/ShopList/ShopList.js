@@ -2,12 +2,18 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchShops, addShop, deleteShop  } from '../../actions/shopActions';
 import { ListGroup, Form, Button } from 'react-bootstrap';
-
+import './ShopListStyle.css';
 const ShopList = () => {
   const dispatch = useDispatch();
   const { shops, loading } = useSelector((state) => state.shop);
   const [newShop, setNewShop] = useState({ name: '', address: '' });
   const [showForm, setShowForm] = useState(false);
+  
+
+
+ const msA = () => {
+<div>5</div>
+ } 
 
 
   useEffect(() => {
@@ -39,14 +45,14 @@ const ShopList = () => {
 
 
   return (
-    <div style={{marginTop:'73px'}}>
-    <h5 style={{ marginLeft: '50px', textAlign: 'center', fontWeight: 'bold', color: 'red',fontsize:'50px' }}>
+      <div style={{ marginTop: '73px' }} className="background-image-container">
+          <h5 style={{ marginLeft: '50px', textAlign: 'center', fontWeight: 'bold', color: 'white', fontsize: '50px', marginTop: '20px' }}>
       Danh sách cửa hàng
     </h5>
       {loading ? (
         <p>Loading...</p>
       ) : (
-			<ListGroup style={{ marginTop: '10px' }}>
+                  <ListGroup style={{ PaddingTop: '10px', opacity: 0.9 }}>
 			  {shops.map((shop) => (
 				<ListGroup.Item key={shop.id} style={{ display: 'flex', justifyContent: 'space-between' }}>
 				  <div>

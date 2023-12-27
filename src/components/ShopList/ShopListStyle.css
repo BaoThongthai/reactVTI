@@ -1,0 +1,8 @@
+.background-image-container {
+  margin: 0 auto; /* Căn giữa container */
+  padding: 0 100px; /* Thêm padding ở hai bên */
+  background-image: url('https://shopbanphim.com/wp-content/uploads/2023/12/background-hoa-mai-1-6f48e2387197df7472231bf0c7fdc432.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

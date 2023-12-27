@@ -1,21 +1,22 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import logo from '../image/logo.jpg';
+import productHomepage from '../image/3.jpg';
 
 const HomePage = () => {
   return (
-    <div style={{ fontFamily: 'Arial, sans-serif', marginLeft: '20px', display: 'flex', flexWrap: 'wrap',marginTop:'78px' }}>
-      <div style={{ flex: '1', marginRight: '20px' }}>
-        <Card style={{ width: '100%' }}>
+    <div style={{ fontFamily: 'Arial, sans-serif', marginLeft: '50px', display: 'flex', flexWrap: 'wrap',marginTop:'78px' }}>
+      <div style={{ flex: '1', marginRight: '-30px' }}>
+        <Card style={{ width: '470px' ,marginTop:'50px'}}>
           <Card.Img
             variant="top"
-            src={logo}
-            alt="logo"
+            src={productHomepage}
+            alt="productHomepage"
             style={{
-              width: '100%',
+				
+              width: '500px',
               height: 'auto',
               borderRadius: '8px',
-			  marginTop:'20px',
+			  
             }}
           />
         </Card>

@@ -23,6 +23,7 @@ const ProductList = ({ products, fetchProducts, editProductName, deleteProduct, 
     fetchProducts();
   }, [fetchProducts]);
 
+
 // xử lý khi người dùng bấm click
   const handleEditClick = (productId, currentName) => {
     setEditingProductId(productId); // lấy ra id của sp được chọn
@@ -71,10 +72,10 @@ const ProductList = ({ products, fetchProducts, editProductName, deleteProduct, 
 
     <div className="container mt-4 ">	 
 
-	   <h1 className="mb-4" style={{ color: 'red', fontWeight: 'bold', textAlign: 'center' ,marginTop:'0px'}}>Danh sách sản phẩm</h1>
+                  <h1 className="mb-4" style={{ color: 'white', fontWeight: 'bold', textAlign: 'center', paddingTop: '10px' }}>Danh sách sản phẩm</h1>
       <ProductSearch onSearch={handleSearch} />
 
-      {filteredProducts.length === 0 && <p style={{ color: 'red', fontWeight: 'bold' }}> * Không tìm thấy sản phẩm phù hợp.</p>}
+                  {filteredProducts.length === 0 && <p style={{ color: 'white', fontWeight: 'bold' }}> * Không tìm thấy sản phẩm phù hợp.</p>}
 
       <div className="row row-cols-1 row-cols-md-4">
         {filteredProducts.map((product) => (
@@ -98,13 +99,13 @@ const ProductList = ({ products, fetchProducts, editProductName, deleteProduct, 
 					  <div>
 					  
 						<input type="text" className="form-control mb-2" value={newProductName} onChange={(e) => setNewProductName(e.target.value)} />
-						
-						<button onClick={() => handleSaveClick(product.id, newProductName)} className="btn btn-success mr-2">
-						  Save
+
+                                <button onClick={() => handleSaveClick(product.id, newProductName)} className="btn btn-success mr-2" style={{ marginRight:'10px' }}>
+						  Lưu sản phẩm 
 						</button>
 						
 						<button onClick={handleCancelClick}  className="btn btn-secondary">
-						  Cancel
+						  Hủy bỏ
 						</button>
 				</div>
                 ) : (

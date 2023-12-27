@@ -13,7 +13,7 @@ const NavbarComponent = () => {
         <img
           src={logo}
           alt="Logo"
-          style={{ marginLeft: '20px',width: '50px', height: '50px' }}
+          style={{ marginLeft: '20px',width: '110px', height: '50px' }}
         />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
