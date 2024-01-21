@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/reactVTI/static/css/main.ff7d5dc2.css",
-    "main.js": "/reactVTI/static/js/main.08fc9dbb.js",
-    "static/js/512.8305d48b.chunk.js": "/reactVTI/static/js/512.8305d48b.chunk.js",
+    "main.css": "/reactVTI/static/css/main.5a7b9aaa.css",
+    "main.js": "/reactVTI/static/js/main.3d6a901f.js",
+    "static/js/787.3aeda83d.chunk.js": "/reactVTI/static/js/787.3aeda83d.chunk.js",
     "static/media/Background-loginvsregiter.mp4": "/reactVTI/static/media/Background-loginvsregiter.591cb9af550ab19792e6.mp4",
     "static/media/videobackground.mp4": "/reactVTI/static/media/videobackground.b4e1e2443e6edabc9b3f.mp4",
     "static/media/3.jpg": "/reactVTI/static/media/3.1216661b67388185374b.jpg",
@@ -11,12 +11,12 @@
     "static/media/logo.jpg": "/reactVTI/static/media/logo.858445d7b5a1cbb9bec3.jpg",
     "static/media/bg1.jpg": "/reactVTI/static/media/bg1.ede98ed6922468487810.jpg",
     "index.html": "/reactVTI/index.html",
-    "main.ff7d5dc2.css.map": "/reactVTI/static/css/main.ff7d5dc2.css.map",
-    "main.08fc9dbb.js.map": "/reactVTI/static/js/main.08fc9dbb.js.map",
-    "512.8305d48b.chunk.js.map": "/reactVTI/static/js/512.8305d48b.chunk.js.map"
+    "main.5a7b9aaa.css.map": "/reactVTI/static/css/main.5a7b9aaa.css.map",
+    "main.3d6a901f.js.map": "/reactVTI/static/js/main.3d6a901f.js.map",
+    "787.3aeda83d.chunk.js.map": "/reactVTI/static/js/787.3aeda83d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ff7d5dc2.css",
-    "static/js/main.08fc9dbb.js"
+    "static/css/main.5a7b9aaa.css",
+    "static/js/main.3d6a901f.js"
   ]
 }
