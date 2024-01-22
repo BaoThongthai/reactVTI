@@ -1,8 +1,16 @@
+
 .background-image-container {
-  margin: 0 auto; /* Căn giữa container */
-  padding: 0 100px; /* Thêm padding ở hai bên */
-  background-image: url('https://shopbanphim.com/wp-content/uploads/2023/12/background-hoa-mai-1-6f48e2387197df7472231bf0c7fdc432.png');
+  width: 100%;
+  height: 100%;
+  /* Add other styles as needed */
+}
+body, html {
+  height: 100%;
+  margin: 0;
+  /* Add other styles as needed */
+}
+.background-image-container {
+  background-image: url('https://cdn.sforum.vn/sforum/wp-content/uploads/2023/11/hinh-nen-do-tet-26.jpg');
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  /* Add other styles as needed */
 }

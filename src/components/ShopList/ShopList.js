@@ -1,25 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchShops, addShop, deleteShop  } from '../../actions/shopActions';
+import { fetchShops, addShop, deleteShop } from '../../actions/shopActions';
 import { ListGroup, Form, Button } from 'react-bootstrap';
 import './ShopListStyle.css';
+
 const ShopList = () => {
   const dispatch = useDispatch();
   const { shops, loading } = useSelector((state) => state.shop);
   const [newShop, setNewShop] = useState({ name: '', address: '' });
-  const [showForm, setShowForm] = useState(false);
-  
-
-
- const msA = () => {
-<div>5</div>
- } 
-
+  const [showForm, setShowForm] = useState(true); // Change the initial state to true
 
   useEffect(() => {
     dispatch(fetchShops());
   }, [dispatch]);
-
 
   const handleInputChange = (e) => {
     setNewShop({ ...newShop, [e.target.name]: e.target.value });
@@ -30,51 +23,37 @@ const ShopList = () => {
     setNewShop({ name: '', address: '' });
   };
 
-
-//xử lý show phần add shop / ẩn hiện
-  const toggleFormVisibility = () => {
-    setShowForm(!showForm);
-  };
-  
-  
-   // Gọi action deleteShop với ID của cửa hàng cần xóa
   const handleDeleteShop = (shopId) => {
-  dispatch(deleteShop(shopId));
-};
-
-
+    dispatch(deleteShop(shopId));
+  };
 
   return (
-      <div style={{ marginTop: '73px' }} className="background-image-container">
-          <h5 style={{ marginLeft: '50px', textAlign: 'center', fontWeight: 'bold', color: 'white', fontsize: '50px', marginTop: '20px' }}>
-      Danh sách cửa hàng
-    </h5>
+    <div style={{ marginTop: '73px', display: 'flex', flexDirection: 'column', alignItems: 'center' }} className="background-image-container">
+      <h3 style={{ textAlign: 'center', fontWeight: 'bold', color: 'white', fontSize: '50px', marginTop: '20px' }}>
+        Danh sách cửa hàng
+      </h3>
       {loading ? (
         <p>Loading...</p>
       ) : (
-                  <ListGroup style={{ PaddingTop: '10px', opacity: 0.9 }}>
-			  {shops.map((shop) => (
-				<ListGroup.Item key={shop.id} style={{ display: 'flex', justifyContent: 'space-between' }}>
-				  <div>
-					<strong>{shop.name}</strong>
-					<p>{shop.address}</p>
-				  </div>
-				  <div>
-					<Button variant="danger" onClick={() => handleDeleteShop(shop.id)}>
-					  Xóa
-					</Button>
-				  </div>
-				</ListGroup.Item>
-			  ))}
-			</ListGroup>
+        <ListGroup style={{ paddingTop: '10px', opacity: 0.9 }}>
+          {shops.map((shop) => (
+            <ListGroup.Item key={shop.id} style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <div>
+                <strong>{shop.name}</strong>
+                <p>{shop.address}</p>
+              </div>
+              <div>
+                <Button variant="danger" onClick={() => handleDeleteShop(shop.id)}>
+                  Xóa
+                </Button>
+              </div>
+            </ListGroup.Item>
+          ))}
+        </ListGroup>
       )}
 
-      <Button variant="primary" onClick={toggleFormVisibility} style={{ marginTop: '10px' }}>
-        {showForm ? 'Close' : ' + Add New Shop '}
-      </Button>
-
       {showForm && (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginTop: '10px',marginBottom: '10px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '10px', marginBottom: '10px', width: '50%' }}>
           <Form>
             <Form.Group>
               <Form.Control
@@ -85,7 +64,7 @@ const ShopList = () => {
                 onChange={handleInputChange}
               />
             </Form.Group>
-            <Form.Group style={{ marginTop: '10px',marginBottom: '10px' }}>
+            <Form.Group style={{ marginTop: '10px', marginBottom: '10px' }}>
               <Form.Control
                 type="text"
                 placeholder="Địa chỉ cửa hàng"
@@ -94,7 +73,7 @@ const ShopList = () => {
                 onChange={handleInputChange}
               />
             </Form.Group>
-            <Button variant="success" onClick={handleAddShop}>
+            <Button variant="success" onClick={handleAddShop} style={{ width: '100%' }}>
               Save
             </Button>
           </Form>
